@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+        }
+
+        /* Full-width input fields */
+        input[type=text],
+        input[type=password] {
+            width: 100%;
+            padding: 15px;
+            margin: 5px 0 22px 0;
+            display: inline-block;
+            border: none;
+            background: #F1F1F1;
+        }
+
+        input[type=text]:focus,
+        input[type=password]:focus {
+            background-color: #ddd;
+            outline: none;
+        }
+
+        /* Overwrite default styles of hr */
+        hr {
+            border: 1px solid #F1F1F1;
+            margin-bottom: 25px;
+        }
+
+        /* Set a style for the submit/register button */
+        .registerbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            opacity: 0.9;
+        }
+
+        .registerbtn:hover {
+            opacity: 1;
+        }
+
+        /* Add a blue text color to links */
+        a {
+            color: dodgerblue;
+        }
+
+        /* Set a grey background color and center the text of the "sign in" section */
+        .signin {
+            background-color: #F1F1F1;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <form th:action="@{/post/admin}" th:object="${admin}" method="post">
+        <div class="marks_container">
+            <h1>Marks Sheet</h1>
+
+            <p>Please enter the marks of the students with their StudentId</p>
+            <hr>
+            <label for="stId"><b>StudentId</b></label>
+            <input type="text" placeholder="Enter StudentId" name="StudentId" id="stId" required>
+
+            <label for="de"><b>DE</b></label>
+            <input type="text" placeholder="Enter DE" name="DE" id="de" required>
+
+            <label for="phy"><b>physics</b></label>
+            <input type="text" placeholder="Enter physics" name="physics" id="phy" required>
+
+            <label for="cad"><b>CAD</b></label>
+            <input type="text" placeholder="Enter CAD" name="CAD" id="cad" required>
+
+            <label for="math"><b>Mathematics</b></label>
+            <input type="text" placeholder="Enter Mathematics" name="Mathematics" id="math" required>
+
+            <label for="chem"><b>Chemistry</b></label>
+            <input type="text" placeholder="Enter Chemistry" name="Chemistry" id="chem" required>
+
+
+            <hr>
+            <!-- <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+            <button type="submit" class="registerbtn">Submit</button>
+        </div>
+    </form>
+</body>
+
+</html>

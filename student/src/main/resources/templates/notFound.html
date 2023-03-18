@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    h2 {
+        text-align: center;
+        padding: 20px;
+        color: red;
+        background-color: rgb(218, 224, 134);
+    }
+    button{
+        font-size: larger;
+        background-color: rgb(58, 185, 185);
+        height: 50px;
+        width: 100%;
+        border: 0px;
+        /* padding: 15px; */
+        border-radius: 5px;
+    }
+</style>
+
+<body>
+    <form th:action="@{/mark}" th:object="${user}" method="get">
+        <h2>Marks Id Not Found</h2>
+        <button>Redirect to Student result page</button>
+    </form>
+</body>
+
+</html>
