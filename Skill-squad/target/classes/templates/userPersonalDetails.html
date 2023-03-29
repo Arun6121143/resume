@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-image: url(https://thumbs.dreamstime.com/z/different-workers-their-tools-isolated-white-background-professions-shown-114342895.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            /* background-position:center center ; */
+            /* background-attachment: fixed; */
+            /* width: 100%;
+            height: 100%; */
+        }
+
+        .left {
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        .img {
+            margin-top: 16px;
+        }
+
+        img {
+            mix-blend-mode: multiply;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-right: 15px;
+            font-size: 30px;
+        }
+
+        .right {
+            display: flex;
+            float: right;
+            margin: 35px;
+            margin-top: -75px;
+            gap: 20px;
+            padding: 5px;
+
+        }
+
+        section {
+            background-color: #ffffff;
+            margin-top: -11px;
+            margin-right: -10px;
+            margin-left: -10px;
+
+        }
+
+        button {
+            padding: 5px;
+        }
+
+        select {
+            font-size: larger;
+            border-radius: 8px;
+            background-color: transparent;
+            text-align: center;
+            border: 0px;
+            margin: 0px;
+        }
+
+
+
+
+        table,
+        th {
+            border: 2px solid black;
+            padding: 50px 50px;
+        }
+
+        .details {
+            color: black;
+            display: grid;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .tbl {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: aliceblue;
+            margin-top: 33px;
+            border-radius: 10px;
+            border: 4px solid black;
+
+        }
+
+        .as {
+            text-decoration: none;
+            color: black;
+            font-size: larger;
+        }
+
+        td {
+            border-bottom: 1px solid black;
+            width: 150px;
+        }
+
+        #imglab {
+            width: 400px;
+            height: 180px;
+        }
+
+        .divimg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="left">
+            <div class="img">
+                <img width="50px" height="50px"
+                    src="https://png.pngtree.com/png-vector/20191119/ourmid/pngtree-beautiful-profile-glyph-vector-icon-png-image_2002807.jpg">
+            </div>
+            <h2>[[${UserPage.getName()}]]</h2>
+        </div>
+        <div class="right">
+
+            <a class="as" href="/user-editDetails">Edit profile</a>
+            <a class="as" href="/user-changePassword">Change Password</a>
+            <a class="as" href="/get-user-login">Logout</a>
+        </div>
+    </section>
+    <hr>
+    <div class="divimg">
+        <img id="imglab"
+            src="https://quotefancy.com/media/wallpaper/3840x2160/465510-Mahatma-Gandhi-Quote-Labour-is-priceless-not-gold.jpg"
+            alt="">
+    </div>
+    <div class="details">
+        <table class="tbl" style="width:100%">
+
+            <tr>
+                <td>Name :</td>
+                <td>[[${UserPage.getName()}]]</td>
+
+            </tr>
+            <tr>
+                <td>Email :</td>
+                <td>[[${UserPage.getEmail()}]]</td>
+            </tr>
+
+            <tr>
+                <td>Location :</td>
+                <td>[[${UserPage.getLocation()}]]</td>
+            </tr>
+
+            <tr>
+                <td>Gender :</td>
+                <td>[[${UserPage.getGender()}]]</td>
+            </tr>
+            <tr>
+                <td>Contact :</td>
+                <td>[[${UserPage.getPhNum()}]]</td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+
+            background-color: #bdcedc;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+
+        }
+
+        .left {
+            display: flex;
+            justify-content: left;
+            gap: 10px;
+            margin: 10px;
+        }
+
+        .img {
+            margin-top: 16px;
+        }
+
+        img {
+            mix-blend-mode: multiply;
+        }
+
+        h2 {
+            margin-top: 25px;
+            margin-right: 15px;
+            font-size: 30px;
+        }
+
+        .right {
+            display: flex;
+            float: right;
+            margin: 35px;
+            margin-top: -75px;
+            gap: 20px;
+            padding: 5px;
+
+        }
+
+        section {
+            background-color: #ffffff;
+            margin-top: -11px;
+            margin-right: -10px;
+            margin-left: -10px;
+
+        }
+
+        button {
+            padding: 5px;
+        }
+
+        select {
+            font-size: larger;
+            border-radius: 8px;
+            background-color: transparent;
+            text-align: center;
+            border: 0px;
+            margin: 0px;
+        }
+
+
+
+
+        table,
+        th {
+            border: 2px solid black;
+            padding: 50px 50px;
+        }
+
+        .details {
+            color: black;
+            display: grid;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .tbl {
+            font-size: 30px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: aliceblue;
+            margin-top: 100px;
+
+        }
+
+        .as {
+            text-decoration: none;
+            color: black;
+            font-size: larger;
+        }
+
+        td {
+            border-bottom: 1px solid black;
+            width: 150px;
+        }
+
+        #btn {
+            border-radius: 5px;
+            text-align: center;
+            border: 0px;
+            font-size: medium;
+            background-color: transparent;
+            margin-top: -3px;
+        }
+
+        .form {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+            height: 500px;
+            padding: 10px;
+            margin: 10px;
+
+        }
+
+        .in {
+            width: 300px;
+            padding: 5px;
+            margin: 11px;
+            height: 30px;
+            border-radius: 10px;
+
+        }
+
+        .formgroup {
+            display: flex;
+            justify-content: center;
+        }
+
+        .formgroup input {
+            width: 100px;
+            height: 30px;
+            border-radius: 10px;
+
+            font-size: 18px;
+        }
+
+        .fm {
+            border: 5px solid black;
+            padding: 40px 35px;
+            background-color: ghostwhite;
+            ;
+        }
+
+        h1 {
+            border-bottom: 1px solid blue;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="left">
+            <div class="img">
+                <img width="50px" height="50px"
+                    src="https://png.pngtree.com/png-vector/20191119/ourmid/pngtree-beautiful-profile-glyph-vector-icon-png-image_2002807.jpg">
+            </div>
+            <h2>[[${UserPage.getName()}]]</h2>
+        </div>
+        <div class="right">
+
+            <a class="as" href="/user-editDetails">Edit profile</a>
+            <a class="as" href="/user-changePassword">Change Password</a>
+            <a class="as" href="/get-user-login">Logout</a>
+            <form th:action="@{/getDetails}" th:object="${user}" method="post">
+                <button id="btn">Profile</button>
+            </form>
+        </div>
+    </section>
+
+    <div>
+
+    </div>
+    <div class="form">
+
+        <form class="fm" th:action="@{/labouruserdetails}" th:object="${user}" method="post">
+            <h1>Search Workers For You...</h1>
+            <input class="in" type="text" name="location" placeholder="Enter the Location" required><br>
+            <input class="in" type="text" name="skill" placeholder="Enter the skill you need" required><br>
+            <div class="formgroup">
+                <input value="search" type="submit">
+            </div>
+
+
+        </form>
+    </div>
+
+</body>
+
+</html>
