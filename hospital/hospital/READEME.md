@@ -23,7 +23,7 @@
 - PUT Patient/update/patient/details/patId/{id}: Update the details of a patient with the provided ID.
 - DELETE Patient/delete/patient/patId/{id}: Delete a patient with the provided ID.
 
-  ### Doctor Endpoints
+ ### Doctor Endpoints
 - POST Hospital/Doctor/addDoc: Create a new doctor with the provided details.
 - GET Hospital/DoctorGetDoctor/Details/docId/{docId}: Get the details of a doctor with the provided ID.
 - PUT Hospital/DoctorUpdate/Doctor/docId/{docId}: Update the details of a doctor with the provided ID.
