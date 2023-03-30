@@ -1,4 +1,4 @@
-# Chat Application
+#  Chat Sphere
 ## Project Overview
 - The Chat Application is a Java-Spring Boot project that allows for user registration and interaction in a chat room setting. The project 
   uses REST APIs and MySQL database to create, read, update, and delete user information.
