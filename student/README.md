@@ -1,4 +1,4 @@
-# Student Marks Management
+#  Student Performance Tracker 
 
 ## Project Overview 
 
