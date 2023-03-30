@@ -1,4 +1,4 @@
-# Hospital Management
+# Health System Administration
 
 ## Project Overview 
 - The Hospital Management System is a Java-Spring Boot project that allows for the management of patients and doctors in a hospital 
